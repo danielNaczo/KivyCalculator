@@ -4,14 +4,17 @@
         orientation: 'vertical'
         size: root.width, root.height
 
-        #shows expression or result
-        Label:
-            id: calculation
-            font_size: 50
-            text_size: self.size
-            halign: "right"
-            valign: "middle"
-            size_hint_y: 0.2
+        #container for expression or result
+        BoxLayout:
+            height: 70
+            size_hint_y: None
+            #label for expression or result
+            Label:
+                id: calculation
+                font_size: 50
+                text_size: self.size
+                halign: "right"
+                valign: "middle"
 
         #container for NumPad
         BoxLayout:
