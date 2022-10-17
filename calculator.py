@@ -16,8 +16,11 @@ class CalculatorWidget(Widget):
         self.ids.calculation.text = calc[:len(calc)-1]
 
     def evaluate(self):
-        result = str(eval(self.ids.calculation.text))
-        self.ids.calculation.text = result
+        try:
+            result = str(eval(self.ids.calculation.text))
+            self.ids.calculation.text = result
+        except:
+            pass
 
 
 class CalculatorApp(App):
