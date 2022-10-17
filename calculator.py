@@ -11,6 +11,10 @@ class CalculatorWidget(Widget):
     def clear(self):
         self.ids.calculation.text = ""
 
+    def delete(self):
+        calc = self.ids.calculation.text
+        self.ids.calculation.text = calc[:len(calc)-1]
+
     def evaluate(self):
         result = str(eval(self.ids.calculation.text))
         self.ids.calculation.text = result

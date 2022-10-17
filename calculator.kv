@@ -1,4 +1,5 @@
 <CalculatorWidget>:
+
     BoxLayout:
         orientation: 'vertical'
         size: root.width, root.height
@@ -29,6 +30,7 @@
                 Button:
                     text: "1"
                     on_release: root.add_Value(self.text)
+                Button:
 
             #2nd column of calculator
             BoxLayout:
@@ -45,6 +47,9 @@
                     on_release: root.add_Value(self.text)
                 Button:
                     text: "2"
+                    on_release: root.add_Value(self.text)
+                Button:
+                    text: "0"
                     on_release: root.add_Value(self.text)
 
             #3rd column of calculator
@@ -63,6 +68,9 @@
                 Button:
                     text: "3"
                     on_release: root.add_Value(self.text)
+                Button:
+                    text: "."
+                    on_release: root.add_Value(self.text)
 
             #4th column of calculator
             BoxLayout:
@@ -70,13 +78,17 @@
 
                 Button:
                     text: "+"
-                    size_hint_y: 0.25
+                    size_hint_y: 0.2
                     on_release: root.add_Value(self.text)
                 Button:
                     text: "C"
-                    size_hint_y: 0.25
+                    size_hint_y: 0.2
                     on_release: root.clear()
                 Button:
+                    text: "DEL"
+                    size_hint_y: 0.2
+                    on_release: root.delete()
+                Button:
                     text: "="
-                    size_hint_y: 0.5
+                    size_hint_y: 0.4
                     on_release: root.evaluate()
