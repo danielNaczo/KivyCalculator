@@ -2,6 +2,11 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 
 
+class CalculatorApp(App):
+    def build(self):
+        return CalculatorWidget()
+
+
 class CalculatorWidget(Widget):
     calculation = None
 
@@ -21,8 +26,3 @@ class CalculatorWidget(Widget):
             self.ids.calculation.text = result
         except:
             pass
-
-
-class CalculatorApp(App):
-    def build(self):
-        return CalculatorWidget()
