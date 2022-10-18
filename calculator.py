@@ -8,8 +8,6 @@ class CalculatorApp(App):
 
 
 class CalculatorWidget(Widget):
-    calculation = None
-
     def add_Value(self, value):
         self.ids.calculation.text += value
 
